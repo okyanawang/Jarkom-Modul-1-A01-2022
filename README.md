@@ -59,6 +59,14 @@ Filter sehingga wireshark hanya menampilkan paket yang menuju port 80!
 <img src="assets/3.png" alt="3">
 <h3>Soal 4</h3>
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
+<ul>
+  <li>Buka wireshark menuju port WIFI</li>
+  <li>Buka capture options</li>
+  <li>Filter dengan "src port 21"</li>
+  <li>Terpampang hasil filter paket yang terambil dari port 21</li>
+</ul>
+<img src="assets/4a.png" alt="4a">
+<img src="assets/4b.png" alt="4b">
 <h3>Soal 5</h3>
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
 <h3>Soal 6</h3>
