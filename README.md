@@ -79,6 +79,11 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
 <img src="assets/5b.png" alt="5b">
 <h3>Soal 6</h3>
 Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !
+<ul>
+  <li>Buka soal3-6.pcapng</li>
+  <li>Filter dengan "http contains "lipi.go.id""</li>
+  <li>Terpampang hasil filter paket yang menuju lipi.go.id</li>
+</ul>
 <h3>Soal 7</h3>
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 <b>Langkah pengerjaan : </b>
