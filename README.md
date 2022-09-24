@@ -69,6 +69,14 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
 <img src="assets/4b.png" alt="4b">
 <h3>Soal 5</h3>
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
+<ul>
+  <li>Buka wireshark menuju port WIFI</li>
+  <li>Buka capture options</li>
+  <li>Filter dengan "src port "443"</li>
+  <li>Terpampang hasil filter paket yang terambil dari port 443</li>
+</ul>
+<img src="assets/5a.png" alt="5a">
+<img src="assets/5b.png" alt="5b">
 <h3>Soal 6</h3>
 Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !
 <h3>Soal 7</h3>
