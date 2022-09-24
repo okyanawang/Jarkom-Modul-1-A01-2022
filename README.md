@@ -84,6 +84,7 @@ Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !
   <li>Filter dengan "http contains "lipi.go.id""</li>
   <li>Terpampang hasil filter paket yang menuju lipi.go.id</li>
 </ul>
+<img src="assets/6.png" alt="6">
 <h3>Soal 7</h3>
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 <b>Langkah pengerjaan : </b>
