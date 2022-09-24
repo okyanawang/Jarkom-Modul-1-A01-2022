@@ -51,6 +51,12 @@ Ishaq sedang bingung mencari topik ta untuk semester ini , lalu ia datang ke web
 <img src="assets/2c.png" alt="2c">
 <h3>Soal 3</h3>
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 80!
+<ul>
+  <li>Buka soal3-6.pcapng</li>
+  <li>Filter dengan "tcp.dstport == 80 || udp.dstport"</li>
+  <li>Terpampang hasil filter paket yang menuju port 80</li>
+</ul>
+<img src="assets/3.png" alt="3">
 <h3>Soal 4</h3>
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
 <h3>Soal 5</h3>
