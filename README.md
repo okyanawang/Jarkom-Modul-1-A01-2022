@@ -25,8 +25,30 @@ https://docs.google.com/document/d/1NMh1ALJ80tbmk6ia_2X4Rt_TnJ67Glac5IUFlAvO1TQ/
 
 <h3>Soal 1</h3>
 Sebutkan web server yang digunakan pada "monta.if.its.ac.id"!
+<b>Langkah pengerjaan : </b>
+<ul>
+  <li>Buka soal1-2.pcapng</li>
+  <li>Filter dengan http</li>
+  <li>Drop down panel Hypertext Transfer Protocol</li>
+  <li>Ditemukan server nginx/1.10.3\r\n</li>
+</ul>
+<img src="assets/1.png" alt="1">
 <h3>Soal 2</h3>
 Ishaq sedang bingung mencari topik ta untuk semester ini , lalu ia datang ke website monta dan menemukan detail topik pada website “monta.if.its.ac.id” , judul TA apa yang dibuka oleh ishaq ?
+<b>Langkah pengerjaan : </b>
+<ul>
+  <li>Buka soal1-2.pcapng</li>
+  <li>Filter dengan "http.request.uri contains "detail""</li>
+  <li>Klik pada salah satu hasil filter</li>
+  <li>Buka menu file -> Export object</li>
+  <li>Pilih http...</li>
+  <li>Save file bertipe htlm</li>
+  <li>Buka pada browser</li>
+  <li>Terpampang topik fuse</li>
+</ul>
+<img src="assets/2a.png" alt="2a">
+<img src="assets/2b.png" alt="2b">
+<img src="assets/2c.png" alt="2c">
 <h3>Soal 3</h3>
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 80!
 <h3>Soal 4</h3>
@@ -37,6 +59,13 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
 Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !
 <h3>Soal 7</h3>
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
+<b>Langkah pengerjaan : </b>
+<ul>
+  <li>Buka wireshark menuju port WIFI</li>
+  <li>Copy IP yang diambil dari command ipconfig pada command line</li>
+  <li>Filter dengan query ip.src == "ip masing-masing"</li>
+</ul>
+<img src="assets/7.png" alt="7">
 <h2>Untuk soal 8-10, silahkan baca cerita di bawah ini!</h2>
 Di sebuah planet bernama Viltrumite, terdapat Kementerian Komunikasi dan Informatika yang baru saja menetapkan kebijakan baru. Dalam kebijakan baru tersebut, pemerintah dapat mengakses data pribadi masyarakat secara bebas jika memang dibutuhkan, baik dengan maupun tanpa persetujuan pihak yang bersangkutan. Sebagai mahasiswa yang sedang melaksanakan program magang di kementerian tersebut, kalian mendapat tugas berupa penyadapan percakapan mahasiswa yang diduga melakukan tindak kecurangan dalam kegiatan Praktikum Komunikasi Data dan Jaringan Komputer 2022. Selain itu, terdapat sebuah password rahasia (flag) yang diduga merupakan milik sebuah organisasi bawah tanah yang selama ini tidak sejalan dengan pemerintahan Planet Viltrumite. Tunggu apa lagi, segera kerjakan tugas magang tersebut agar kalian bisa mendapatkan pujian serta kenaikan jabatan di kementerian tersebut!
 <h3>Soal 8</h3>
