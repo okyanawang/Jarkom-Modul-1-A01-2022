@@ -98,9 +98,40 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 Di sebuah planet bernama Viltrumite, terdapat Kementerian Komunikasi dan Informatika yang baru saja menetapkan kebijakan baru. Dalam kebijakan baru tersebut, pemerintah dapat mengakses data pribadi masyarakat secara bebas jika memang dibutuhkan, baik dengan maupun tanpa persetujuan pihak yang bersangkutan. Sebagai mahasiswa yang sedang melaksanakan program magang di kementerian tersebut, kalian mendapat tugas berupa penyadapan percakapan mahasiswa yang diduga melakukan tindak kecurangan dalam kegiatan Praktikum Komunikasi Data dan Jaringan Komputer 2022. Selain itu, terdapat sebuah password rahasia (flag) yang diduga merupakan milik sebuah organisasi bawah tanah yang selama ini tidak sejalan dengan pemerintahan Planet Viltrumite. Tunggu apa lagi, segera kerjakan tugas magang tersebut agar kalian bisa mendapatkan pujian serta kenaikan jabatan di kementerian tersebut!
 <h3>Soal 8</h3>
 Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna berupa percakapan antara dua mahasiswa terkait tindakan kecurangan pada kegiatan praktikum. Percakapan tersebut dilaporkan menggunakan protokol jaringan dengan tingkat keandalan yang tinggi dalam pertukaran datanya sehingga kalian perlu menerapkan filter dengan protokol yang tersebut.
+<b>Langkah pengerjaan : </b>
+<ul>
+  <li>Buka soal 8-10.pcapng</li>
+  <li>Buka fitur Statistics -> Conversation pada Wireshark</li>
+  <li>Karena percakapan memiliki beberapa paket yang dikirim antara dua endpoints, sehingga diurutkan dari paket yang terbesar</li>
+  <li>Setelah diurutkan, bisa langsung dengan follow tcp stream, atau menjadikan conversation tersebut menjadi filter dengan cara Apply as filter -> Selected -> A ⇆ B</li>
+  <li>Setelah di follow stream, bisa dilihat hasil dari percakapan yang dilakukan. Jumlah percakapan ada tiga buah, dan salah satunya merupakan hint untuk soal berikutnya</li>
+</ul>
+ip.addr==127.0.0.1 && tcp.port==60236 && ip.addr==127.0.1.1 && tcp.port==65432
+<img src="assets/8a.png" alt="8a">
+<img src="assets/8b.png" alt="8b">
+
+ip.addr==127.0.0.1 && tcp.port==60256 && ip.addr==127.0.1.1 && tcp.port==65432
+<img src="assets/8c.png" alt="8c">
+<img src="assets/8d.png" alt="8d">
+
+ip.addr==127.0.0.1 && tcp.port==60258 && ip.addr==127.0.1.1 && tcp.port==65432
+<img src="assets/8e.png" alt="8e">
+<img src="assets/8f.png" alt="8f">
 <h3>Soal 9</h3>
 Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format [nama_kelompok].des3 dan simpan output file dengan nama “flag.txt”.
-Sebutkan web server yang digunakan pada "monta.if.its.ac.id"!
+<b>Langkah pengerjaan : </b>
+<ul>
+  <li>Dari salah satu percakapan pada soal 8, terdapat salah satu percakapan yang menunjukkan terjadi pengiriman file melalui port 9002</li>
+  <li>Setelah kita filter menggunakan tcp.port==9002, terdapat salah satu paket yang berisi Salted file yang terenkripsi</li>
+<img src="assets/9a.png" alt="9a">
+  <li>File tersebut bisa kita save as [nama_kelompok].des3 atau merubahnya menjadi raw terlebih dahulu sebelum disave jika bermasalah saat pendekripsian.
+  <li>Setelah disave as .des3, bisa kita dekripsi menggunakan openssl metode des3, seperti yang dijelaskan pada salah satu percakapan pada nomor 8</li>
+  <li>Untuk password yang kita gunakan adalah 'nakano' yaitu kemiripan dari kelima bersaudara</li>
+<img src="assets/9b.png" alt="9b">
+</ul>
 <h3>Soal 10</h3>
 Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di atas!
+<ul>
+Setelah didekripsi, didapatkan sebuah flag yaitu JaRkOm2022{8uK4N_CtF_k0k_h3h3h3} yang terdapat pada file flag.txt
+</ul>
 Note: Terkait soal nomor 9 dan 10, file yang didapatkan tidak perlu dikumpulkan, cukup tulis flag yang didapatkan ke dalam laporan kalian 🙏
